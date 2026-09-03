@@ -1,29 +1,28 @@
 /* HERO SECTION - Сдвиг балкера правее */
 .hero {
   position: relative;
-  min-height: 640px;
+  min-height: 650px;
   display: flex;
   align-items: center;
   padding: 100px 0;
   background-color: #0b1329;
-  /* Четкая темная подложка под текст слева и чистая правая зона под судно */
   background-image: 
     linear-gradient(
       90deg, 
       rgba(11, 19, 41, 0.98) 0%, 
-      rgba(11, 19, 41, 0.85) 40%, 
-      rgba(11, 19, 41, 0.10) 75%, 
+      rgba(11, 19, 41, 0.85) 35%, 
+      rgba(11, 19, 41, 0.10) 65%, 
       rgba(11, 19, 41, 0) 100%
     ),
     url('inessa-5-bg.png');
-  background-size: cover;
-  /* Сдвигаем фоновое изображение правее */
-  background-position: 85% center;
+  background-size: contain;
+  background-position: right center;
   background-repeat: no-repeat;
 }
 
 .hero-content {
-  max-width: 540px; /* Сужаем блок текста, чтобы он не заходил на балкер */
+  max-width: 460px;
+ /* Сужаем блок текста, чтобы он не заходил на балкер */
 }
 
 /* LIBRARY SECTION STYLES */
