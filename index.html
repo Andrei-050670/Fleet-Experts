@@ -1,174 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fleet Experts Solutions | Maritime Technical Advisory</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleet Experts Solutions — Maritime Decarbonization & Engineering Advisory</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-wider text-white">
-                FLEET EXPERTS <span class="text-blue-500">SOLUTIONS</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#experts" class="hover:text-white transition">Global Network</a>
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
-            </nav>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-sm px-4 py-2 rounded-lg font-medium transition">
-                Request Audit
-            </a>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">FLEET EXPERTS</span> SOLUTIONS
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About Expert</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH BULKER BACKGROUND -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">Inessa 5 Green Retrofit Series</span>
+        <h1 class="hero-title">
+          <span class="accent-text">177k cbm:</span> Optimized.<br>
+          <span class="accent-text">180k cbm:</span> Future Ready.
+        </h1>
+        <p class="hero-subtitle">
+          Advanced Energy-Saving Technologies, CII/EEXI Optimization & Wind-Assisted Propulsion Integration.
+        </p>
+
+        <!-- Feature Cards Grid -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-num">1</div>
+            <h3>Higher Capacity</h3>
+            <p>Optimized cargo volume within efficient hull design</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">2</div>
+            <h3>Operational Flexibility</h3>
+            <p>Full adaptability for multi-route & partial loading conditions</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">3</div>
+            <h3>Ultra-Low Boil-Off</h3>
+            <p>Sub-0.08% loss via smart containment & systems</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-num">4</div>
+            <h3>Minimal Emissions</h3>
+            <p>Dual-fuel engines, rotor sails & hull air lubrication</p>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="py-24 px-6 max-w-7xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <div class="inline-block bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20 mb-4">
-                INDEPENDENT MARITIME TECHNICAL ADVISORY
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                Global Technical Expertise for Fleet Performance & Safety
-            </h1>
-            <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                Independent owner representation, marine engine diagnostics, shipyard dry-docking supervision, and operational risk mitigation worldwide.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-lg text-center transition">
-                    Contact Advisory Board
-                </a>
-                <a href="#services" class="border border-slate-700 hover:bg-slate-800 text-slate-300 font-medium px-6 py-3 rounded-lg text-center transition">
-                    Explore Services
-                </a>
-            </div>
+  <!-- ABOUT EXPERT SECTION -->
+  <section id="about" class="expert-section">
+    <div class="expert-container">
+      <div class="expert-image-wrapper">
+        <img src="images/profile.jpg" alt="Andrey Simakin - Senior Marine Engineer" class="expert-img">
+      </div>
+      <div class="expert-info">
+        <span class="section-tag">Technical Excellence</span>
+        <h2>Andrey Simakin</h2>
+        <p class="expert-role">Senior Marine Engineer & Fleet Management Consultant</p>
+        <p class="expert-desc">
+          Specializing in ship operations, engine maintenance, technical auditing, and complex vessel retrofits. Delivering practical engineering solutions for IMO CII/EEXI compliance, EU ETS strategies, and green fleet transformation.
+        </p>
+        <div class="expert-badges">
+          <span class="badge">Marine Engineering</span>
+          <span class="badge">Decarbonization</span>
+          <span class="badge">Shipyard Supervision</span>
         </div>
-        <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-2xl shadow-xl backdrop-blur">
-            <h3 class="text-xl font-bold text-white mb-6">Core Operational Hubs</h3>
-            <ul class="space-y-4 text-slate-300">
-                <li class="flex items-start space-x-3">
-                    <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
-                    <span><strong>Cyprus & Eastern Mediterranean:</strong> Management & Technical Back-Office</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
-                    <span><strong>Turkey & Black Sea:</strong> Shipyard Supervision & Engine Overhaul</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
-                    <span><strong>Southeast Asia & China:</strong> Retrofits, CII Audits & Pre-purchase</span>
-                </li>
-            </ul>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experts Section -->
-    <section id="experts" class="py-20 bg-slate-950 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Global Advisory Board</h2>
-                <p class="text-slate-400 mt-2">Senior superintendents, technical managers, and executive advisors</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Andrei Simakin Card -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center">
-                    <div class="w-28 h-28 bg-slate-800 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-300 text-3xl font-bold border-2 border-blue-500">
-                        AS
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Andrei Simakin</h3>
-                    <p class="text-blue-400 text-sm mb-3">Technical Director & Propulsion Expert</p>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Fleet technical management, heavy engine repair audit (MAN / Wärtsilä), CAPEX/OPEX optimization, and green retrofit frameworks.
-                    </p>
-                    <a href="mailto:andrei@fleetexperts.solutions" class="text-slate-400 hover:text-blue-400 text-xs transition">
-                        <i class="fa-regular fa-envelope mr-1"></i> andrei@fleetexperts.solutions
-                    </a>
-                </div>
-
-                <!-- Inessa Simakina Card -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center">
-                    <div class="w-28 h-28 bg-slate-800 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-300 text-3xl font-bold border-2 border-blue-500">
-                        IS
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Inessa Simakina</h3>
-                    <p class="text-blue-400 text-sm mb-3">Marketing & Client Relations Director</p>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Strategic communications, brand positioning, international client partnerships, and enterprise marketing solutions for fleet advisory.
-                    </p>
-                    <a href="mailto:inna@fleetexperts.solutions" class="text-slate-400 hover:text-blue-400 text-xs transition">
-                        <i class="fa-regular fa-envelope mr-1"></i> inna@fleetexperts.solutions
-                    </a>
-                </div>
-
-                <!-- Associate Placeholder -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center">
-                    <div class="w-28 h-28 bg-slate-800 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-500 text-2xl font-bold border border-slate-700">
-                        PHOTO
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Senior Partner</h3>
-                    <p class="text-blue-400 text-sm mb-3">Shipyard Supervision & Dry-Docking</p>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Full dry-dock management, repair budget control, structural integrity assessment, and machinery claims representation.
-                    </p>
-                    <span class="text-slate-500 text-xs">Technical Advisory Board</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white">Core Technical Advisory</h2>
-            <p class="text-slate-400 mt-2">Comprehensive operational solutions for shipowners and charterers</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
-                <i class="fa-solid fa-clipboard-check text-blue-500 text-2xl mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Owner Representation</h3>
-                <p class="text-slate-400 text-sm">Independent supervision during major overhauls, dry-docking, and shipyard negotiations to safeguard owner interest.</p>
-            </div>
-            <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
-                <i class="fa-solid fa-gears text-blue-500 text-2xl mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Machinery Diagnostics</h3>
-                <p class="text-slate-400 text-sm">Deep-dive technical assessment for main engines, auxiliary plant failure root-cause analysis, and preventive maintenance.</p>
-            </div>
-            <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
-                <i class="fa-solid fa-leaf text-blue-500 text-2xl mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Decarbonization & CII</h3>
-                <p class="text-slate-400 text-sm">Energy efficiency retrofits, CII rating optimization gap analysis, dual-fuel feasibility studies, and FuelEU compliance.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-950 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Contact Our Technical Board</h2>
-            <p class="text-slate-400 mb-8">Reach out directly to schedule a confidential audit or discuss dry-dock supervision options.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <div class="inline-flex items-center space-x-3 bg-slate-900 border border-slate-800 px-6 py-4 rounded-xl text-base text-blue-400 font-semibold">
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="mailto:andrei@fleetexperts.solutions" class="hover:underline">andrei@fleetexperts.solutions</a>
-                </div>
-                <div class="inline-flex items-center space-x-3 bg-slate-900 border border-slate-800 px-6 py-4 rounded-xl text-base text-blue-400 font-semibold">
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="mailto:inna@fleetexperts.solutions" class="hover:underline">inna@fleetexperts.solutions</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 py-8 px-6 text-center text-slate-500 text-xs">
-        &copy; 2026 Fleet Experts Solutions. All rights reserved.
-    </footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; Fleet Experts Solutions (fleetexperts.solutions). All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
