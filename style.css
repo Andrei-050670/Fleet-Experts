@@ -15,8 +15,8 @@
       rgba(11, 19, 41, 0) 100%
     ),
     url('inessa-5-bg.png');
-  background-size: contain;
-  background-position: right center;
+  background-size: cover;
+  background-position: 80% center;
   background-repeat: no-repeat;
 }
 
