@@ -71,15 +71,17 @@
 
                         <div class="form-group">
                             <label for="dwt">Deadweight (DWT)</label>
-                            <input type="number" id="dwt" placeholder="e.g. 58000" min="1000" required>
+                            <input type="number" id="dwt" placeholder="e.g. 58000" value="58000" min="1000" required>
                         </div>
 
                         <div class="form-group">
                             <label for="cii-rating">Current CII Rating</label>
                             <select id="cii-rating" required>
+                                <option value="A">A - Major Superior</option>
+                                <option value="B">B - Minor Superior</option>
                                 <option value="C">C - Moderate</option>
                                 <option value="D">D - Action Required</option>
-                                <option value="E">E - Immediate Action</option>
+                                <option value="E" selected>E - Immediate Action</option>
                             </select>
                         </div>
 
@@ -98,16 +100,16 @@
                         <label>Target Retrofit Technologies</label>
                         <div class="checkbox-group">
                             <label class="checkbox-label">
-                                <input type="checkbox" id="tech-wind" value="8"> Wind-Assisted Propulsion (Rotor Sails / Rigid Wings)
+                                <input type="checkbox" id="tech-wind" value="8" checked> Wind-Assisted Propulsion (Rotor Sails / Rigid Wings)
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" id="tech-vfd" value="3"> Variable Frequency Drives (VFD Pumps & Fans)
+                                <input type="checkbox" id="tech-vfd" value="3" checked> Variable Frequency Drives (VFD Pumps & Fans)
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" id="tech-esd" value="5"> Energy Saving Devices (Mewis Duct / Boss Cap Fins)
+                                <input type="checkbox" id="tech-esd" value="5" checked> Energy Saving Devices (Mewis Duct / Boss Cap Fins)
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" id="tech-hull" value="6"> Silicone / Graphite Hydrophobic Coatings
+                                <input type="checkbox" id="tech-hull" value="6" checked> Silicone / Graphite Hydrophobic Coatings
                             </label>
                         </div>
                     </div>
@@ -124,7 +126,7 @@
                         </div>
                         <div class="result-item">
                             <span class="result-label">Projected CII Trajectory</span>
-                            <span class="result-value highlight" id="res-cii">Grade C or better</span>
+                            <span class="result-value highlight" id="res-cii">Grade B</span>
                         </div>
                         <div class="result-item">
                             <span class="result-label">Est. Annual CO2 Reduction</span>
@@ -299,30 +301,43 @@
         </div>
     </section>
 
-    <!-- LIBRARY SECTION -->
+    <!-- LIBRARY SECTION (CLICKABLE CARDS) -->
     <section id="library" class="library-section">
         <div class="container">
             <span class="sub-heading text-center">KNOWLEDGE BASE</span>
             <h2 class="section-title text-center">Technical Library & Publications</h2>
+            <p class="section-desc text-center">Click on any paper below to view or download our technical research publications.</p>
             
             <div class="library-grid">
-                <div class="library-card">
-                    <span class="doc-type">PDF Whitepaper</span>
+                <a href="docs/cii-eexi-strategies.pdf" target="_blank" class="library-card">
+                    <div class="doc-header">
+                        <span class="doc-type">PDF WHITEPAPER</span>
+                        <span class="doc-icon">📄</span>
+                    </div>
                     <h3>CII & EEXI Compliance Strategies</h3>
                     <p>Practical assessment methodology for bulker energy saving retrofits and long-term CII rating trajectory modeling.</p>
-                </div>
+                    <span class="card-link-text">Read / Download PDF &rarr;</span>
+                </a>
                 
-                <div class="library-card">
-                    <span class="doc-type">Technical Guide</span>
+                <a href="docs/waps-integration-guide.pdf" target="_blank" class="library-card">
+                    <div class="doc-header">
+                        <span class="doc-type">TECHNICAL GUIDE</span>
+                        <span class="doc-icon">📘</span>
+                    </div>
                     <h3>Wind-Assisted Propulsion Integration</h3>
                     <p>Feasibility and hydrodynamic performance evaluations for modern rotor sails and rigid wing setups on bulk carriers.</p>
-                </div>
+                    <span class="card-link-text">Read / Download Guide &rarr;</span>
+                </a>
                 
-                <div class="library-card">
-                    <span class="doc-type">Analysis</span>
+                <a href="docs/eu-ets-fleet-strategy.pdf" target="_blank" class="library-card">
+                    <div class="doc-header">
+                        <span class="doc-type">ANALYSIS</span>
+                        <span class="doc-icon">📊</span>
+                    </div>
                     <h3>EU ETS Strategy for Fleet Operators</h3>
                     <p>Financial risk mitigation, carbon allowance optimization, and operational tuning under EU ETS frameworks.</p>
-                </div>
+                    <span class="card-link-text">Read / Download Analysis &rarr;</span>
+                </a>
             </div>
         </div>
     </section>
@@ -356,25 +371,49 @@
         </div>
     </footer>
 
-    <!-- CALCULATOR SCRIPT -->
+    <!-- DYNAMIC CALCULATOR SCRIPT -->
     <script>
     function calculateProject() {
-        const dwt = parseFloat(document.getElementById('dwt').value) || 50000;
+        const dwt = parseFloat(document.getElementById('dwt').value) || 58000;
+        const startRating = document.getElementById('cii-rating').value; // A, B, C, D, E
+
         const wind = document.getElementById('tech-wind').checked ? 8 : 0;
         const vfd = document.getElementById('tech-vfd').checked ? 3 : 0;
         const esd = document.getElementById('tech-esd').checked ? 5 : 0;
         const hull = document.getElementById('tech-hull').checked ? 6 : 0;
 
         let totalSavings = wind + vfd + esd + hull;
-        if (totalSavings === 0) totalSavings = 6;
+        if (totalSavings === 0) totalSavings = 5;
+
+        // Dynamic CII Calculation
+        const ratingsOrder = ['E', 'D', 'C', 'B', 'A'];
+        let currentIndex = ratingsOrder.indexOf(startRating);
+
+        // Grade Jump logic based on savings
+        let gradeJump = 1; 
+        if (totalSavings >= 10 && totalSavings < 18) gradeJump = 2; 
+        if (totalSavings >= 18) gradeJump = 3; 
+
+        let newIndex = Math.min(currentIndex + gradeJump, 4);
+        let finalRating = ratingsOrder[newIndex];
+
+        // Format textual outcome
+        let ratingText = "Grade " + finalRating;
+        if (finalRating === 'B' || finalRating === 'A') {
+            ratingText = "Grade " + finalRating + " (Sustainable)";
+        }
 
         const annualCo2Saved = Math.round((dwt * 0.12) * (totalSavings / 100));
 
         document.getElementById('res-fuel').innerText = '~' + totalSavings + '%';
+        document.getElementById('res-cii').innerText = ratingText;
         document.getElementById('res-co2').innerText = '~' + annualCo2Saved.toLocaleString() + ' MT / year';
         
         document.getElementById('calc-result').classList.remove('hidden');
     }
+
+    // Auto-run on load to display correct values immediately
+    window.addEventListener('DOMContentLoaded', calculateProject);
     </script>
 
 </body>
