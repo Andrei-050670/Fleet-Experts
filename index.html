@@ -18,6 +18,8 @@
             <nav class="nav-menu">
                 <a href="#about" class="nav-link">About Expert</a>
                 <a href="#estimator" class="nav-link">Project Estimator</a>
+                <a href="#technologies" class="nav-link">Technologies</a>
+                <a href="#lifecycle" class="nav-link">Project A-Z</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#library" class="nav-link">Library</a>
                 <a href="#partners" class="nav-link">Partners</a>
@@ -26,7 +28,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (Две колонки: текст слева, судно справа) -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -46,7 +48,7 @@
         </div>
     </section>
 
-    <!-- VESSEL RETROFIT CALCULATOR SECTION -->
+    <!-- ESTIMATOR SECTION -->
     <section id="estimator" class="estimator-section">
         <div class="container">
             <span class="sub-heading text-center">INTERACTIVE TOOL</span>
@@ -87,6 +89,7 @@
                                 <option value="vlsfo">VLSFO / MGO</option>
                                 <option value="hfo">HFO + Scrubber</option>
                                 <option value="lng">Dual Fuel (LNG)</option>
+                                <option value="bio">Biofuel (B30/HVO)</option>
                             </select>
                         </div>
                     </div>
@@ -101,7 +104,10 @@
                                 <input type="checkbox" id="tech-vfd" value="3"> Variable Frequency Drives (VFD Pumps & Fans)
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" id="tech-hull" value="4"> Air Lubrication / Premium Hull Coating
+                                <input type="checkbox" id="tech-esd" value="5"> Energy Saving Devices (Mewis Duct / Boss Cap Fins)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="tech-hull" value="6"> Silicone / Graphite Hydrophobic Coatings
                             </label>
                         </div>
                     </div>
@@ -109,7 +115,6 @@
                     <button type="submit" class="btn btn-primary btn-block">Generate Preliminary Assessment</button>
                 </form>
 
-                <!-- RESULT BOX -->
                 <div id="calc-result" class="calc-result hidden">
                     <h3>Preliminary Project Summary</h3>
                     <div class="result-grid">
@@ -127,9 +132,143 @@
                         </div>
                     </div>
                     <div class="result-actions">
-                        <p>Request a tailored engineering study with exact CAPEX, OPEX and EU ETS penalty calculations:</p>
+                        <p>Request a tailored engineering study with exact CAPEX, OPEX and Class Approval roadmap:</p>
                         <a href="#contact" class="btn btn-secondary">Request Detailed Engineering Audit</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES & INNOVATIONS SECTION -->
+    <section id="technologies" class="tech-section">
+        <div class="container">
+            <span class="sub-heading text-center">CUTTING-EDGE SOLUTIONS</span>
+            <h2 class="section-title text-center">Decarbonization & Efficiency Technologies</h2>
+            <p class="section-desc text-center">
+                From fast-payback hydrodynamic devices to future-proof dual-fuel readiness and low-friction hull coatings.
+            </p>
+
+            <div class="tech-grid">
+                <!-- Tech 1 -->
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Propeller & Hydrodynamic ESDs</h3>
+                    <p><strong>Mewis Ducts, Pre-swirl Stators & Boss Cap Fins (PBCF).</strong> Optimizes water flow into the propeller, reducing rotational losses and generating <strong>3% to 8% fuel savings</strong> with minimal dry-dock installation time.</p>
+                </div>
+
+                <!-- Tech 2 -->
+                <div class="tech-card">
+                    <div class="tech-icon">🧪</div>
+                    <h3>Advanced Hull Coatings: Silicone vs Graphite</h3>
+                    <p><strong>Silicone Foul-Release:</strong> Ultra-slick surfaces for 4-6% fuel reduction.<br>
+                    <strong>Graphite/Graphene Coatings:</strong> Extreme mechanical durability, persistent biofouling protection, and hydrodynamic drag reduction.</p>
+                </div>
+
+                <!-- Tech 3 -->
+                <div class="tech-card">
+                    <div class="tech-icon">🌱</div>
+                    <h3>Biofuel Preparedness (Drop-in Fuels)</h3>
+                    <p>Immediate CO2 impact for EU ETS & FuelEU Maritime compliance (B30/HVO). Includes fuel system compatibility audits, elastomer upgrades, tank cleaning protocols, and Class NOx File updates.</p>
+                </div>
+
+                <!-- Tech 4 -->
+                <div class="tech-card">
+                    <div class="tech-icon">⚓</div>
+                    <h3>Wind-Assisted Propulsion (WAPS)</h3>
+                    <p>Integration of Rotor Sails (Flettner) and Rigid Wings. Delivers <strong>8% to 20% fuel savings</strong>. Complete structural deck integration, stability calculations, and Class approval support.</p>
+                </div>
+
+                <!-- Tech 5 -->
+                <div class="tech-card">
+                    <div class="tech-icon">🔄</div>
+                    <h3>Dual-Fuel Integration & Readiness (Methanol / LNG)</h3>
+                    <p>Full-scope independent engineering for <strong>Methanol-Ready / Gas-Ready</strong> conversions. We handle tank integration, double-walled piping, ESD safety, nitrogen inerting, and Class Plan Approval (IGF Code) — pairing seamlessly with OEM engine kit suppliers.</p>
+                </div>
+
+                <!-- Tech 6 -->
+                <div class="tech-card">
+                    <div class="tech-icon">⚙️</div>
+                    <h3>VFD & Electrical Automation</h3>
+                    <p>Variable frequency drives for seawater pumps and engine room ventilation. Dynamic speed tuning yields up to <strong>40% auxiliary electrical load reduction</strong> with payback under 18 months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT LIFECYCLE SECTION (A TO Z) -->
+    <section id="lifecycle" class="lifecycle-section">
+        <div class="container">
+            <span class="sub-heading text-center">WORKFLOW EXCELLENCE</span>
+            <h2 class="section-title text-center">Project Lifecycle: From Audit to Class Approval</h2>
+            <p class="section-desc text-center">
+                A structured 4-step engineering roadmap ensuring zero operational downtime and seamless Class acceptance.
+            </p>
+
+            <div class="lifecycle-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Shipboard Audit & Feasibility Study</h3>
+                    <p>Onboard inspection of vessel machinery and automation systems. Analysis of operational Noon Reports, telemetry, and baseline CII/EEXI gaps to calculate ROI and CAPEX/OPEX.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Engineering & Class Approval</h3>
+                    <p>Preparation of Basic & Detailed Engineering packages. Hydrodynamic, structural, electrical load, and stability calculations submitted for Class Plan Approval (DNV, LR, BV, RINA, ABS).</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Repair Specification & Sourcing</h3>
+                    <p>Formulation of a comprehensive Technical Repair Specification (Ремведомость). Equipment sourcing, contractor auditing, and shipyard preparation (Yalova, Vietnam, etc.).</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Dry-Dock Supervision & Commissioning</h3>
+                    <p>On-site senior superintendent supervision during shipyard dry-docking. Machinery tuning, automation integration, sea trials, and final Class certificate re-issuance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & PACKAGES SECTION -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <span class="sub-heading text-center">OUR CAPACITY</span>
+            <h2 class="section-title text-center">Engineering Services & Solutions</h2>
+            
+            <div class="services-grid">
+                <div class="service-package-card">
+                    <h3>CII & Decarbonization Desktop Study</h3>
+                    <p class="package-desc">Rapid analytical assessment for shipowners evaluating energy retrofit options and EU ETS financial exposures.</p>
+                    <ul>
+                        <li>Baseline CII trajectory modeling</li>
+                        <li>ESD & WAPS technology selection</li>
+                        <li>CAPEX / OPEX & Payback calculation</li>
+                    </ul>
+                </div>
+
+                <div class="service-package-card featured">
+                    <div class="badge-card">RECOMMENDED</div>
+                    <h3>Full Shipboard Audit & Repair Spec</h3>
+                    <p class="package-desc">Comprehensive physical inspection of all engine room systems, pumps, automation, and hull performance by senior marine engineers.</p>
+                    <ul>
+                        <li>Onboard inspection & diagnostics</li>
+                        <li>Machinery & Automation overhaul plan</li>
+                        <li>Complete Technical Repair Specification</li>
+                    </ul>
+                </div>
+
+                <div class="service-package-card">
+                    <h3>Dry-Dock & Retrofit Turnkey Supervision</h3>
+                    <p class="package-desc">End-to-end technical management and shipyard supervision for retrofits, ESD installations, and dual-fuel conversions.</p>
+                    <ul>
+                        <li>On-site shipyard superintendent</li>
+                        <li>Automation & Electrical integration</li>
+                        <li>Class Survey & Sea Trials handover</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -147,12 +286,13 @@
                     <h2>Andrei Simakin</h2>
                     <p class="role-title">Senior Marine Engineer & Fleet Management Consultant</p>
                     <p class="about-text">
-                        Specializing in ship operations, engine maintenance, technical auditing, and complex vessel retrofits. Delivering practical engineering solutions for IMO Green compliance, EU ETS strategies, and green fleet transformation.
+                        Specializing in ship operations, engine maintenance, technical auditing, and complex vessel retrofits. Delivering practical engineering solutions for IMO Green compliance, EU ETS strategies, and green fleet transformation. Supported by a global network of senior marine engineers and automation specialists.
                     </p>
                     <div class="tags-container">
                         <span class="tag">Marine Engineering</span>
                         <span class="tag">Decarbonization</span>
                         <span class="tag">Shipyard Supervision</span>
+                        <span class="tag">Class Plan Approval</span>
                     </div>
                 </div>
             </div>
@@ -222,10 +362,11 @@
         const dwt = parseFloat(document.getElementById('dwt').value) || 50000;
         const wind = document.getElementById('tech-wind').checked ? 8 : 0;
         const vfd = document.getElementById('tech-vfd').checked ? 3 : 0;
-        const hull = document.getElementById('tech-hull').checked ? 4 : 0;
+        const esd = document.getElementById('tech-esd').checked ? 5 : 0;
+        const hull = document.getElementById('tech-hull').checked ? 6 : 0;
 
-        let totalSavings = wind + vfd + hull;
-        if (totalSavings === 0) totalSavings = 5;
+        let totalSavings = wind + vfd + esd + hull;
+        if (totalSavings === 0) totalSavings = 6;
 
         const annualCo2Saved = Math.round((dwt * 0.12) * (totalSavings / 100));
 
