@@ -340,7 +340,7 @@ a {
     line-height: 1.6;
 }
 
-/* LIFECYCLE SECTION (A TO Z) */
+/* LIFECYCLE SECTION */
 .lifecycle-section {
     padding: 80px 0;
     background-color: #080d1d;
@@ -359,7 +359,6 @@ a {
     border: 1px solid #1e293b;
     border-radius: 10px;
     padding: 25px;
-    position: relative;
 }
 
 .step-number {
@@ -501,7 +500,7 @@ a {
     font-size: 0.8rem;
 }
 
-/* LIBRARY SECTION */
+/* LIBRARY SECTION & CLICKABLE CARDS */
 .library-section {
     padding: 80px 0;
     background-color: #0b1329;
@@ -516,29 +515,63 @@ a {
 }
 
 .library-card {
+    display: flex;
+    flex-direction: column;
     background-color: #0f172a;
     border: 1px solid #1e293b;
     border-radius: 10px;
     padding: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.library-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+.doc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .doc-type {
     font-size: 0.75rem;
     color: #38bdf8;
     font-weight: 700;
-    display: block;
-    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.doc-icon {
+    font-size: 1.2rem;
 }
 
 .library-card h3 {
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 10px;
 }
 
 .library-card p {
     color: #94a3b8;
     font-size: 0.88rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-link-text {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.library-card:hover .card-link-text {
+    color: #7dd3fc;
+    text-decoration: underline;
 }
 
 /* PARTNERS SECTION */
@@ -596,6 +629,6 @@ footer {
         grid-column: span 1;
     }
     .nav-menu {
-        display: none; /* Can be enhanced with mobile menu toggle */
+        display: none;
     }
 }
