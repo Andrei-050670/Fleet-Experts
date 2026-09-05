@@ -8,6 +8,142 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MODAL CUSTOM STYLES -->
+    <style>
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11, 37, 69, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        backdrop-filter: blur(4px);
+      }
+
+      .modal-content {
+        background: #ffffff;
+        padding: 2rem 2.5rem;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        color: #1d2d44;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .modal-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #888;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s ease;
+      }
+
+      .modal-close-btn:hover {
+        color: #0b2545;
+      }
+
+      .modal-content h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: #0b2545;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+
+      .modal-content p.modal-subtitle {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 1.2rem;
+      }
+
+      .modal-form .form-group-modal {
+        margin-bottom: 0.9rem;
+      }
+
+      .modal-form input,
+      .modal-form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 0.9rem;
+      }
+
+      .modal-form input:focus,
+      .modal-form textarea:focus {
+        outline: none;
+        border-color: #00a86b;
+      }
+
+      .btn-modal-submit {
+        width: 100%;
+        padding: 0.85rem;
+        background-color: #00a86b;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .btn-modal-submit:hover {
+        background-color: #008f5a;
+      }
+
+      .modal-divider {
+        margin: 1.2rem 0;
+        border: 0;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .direct-contacts-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #0b2545;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.6rem;
+      }
+
+      .direct-contacts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+
+      .direct-contacts-list li {
+        font-size: 0.85rem;
+      }
+
+      .direct-contacts-list a {
+        color: #134074;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .direct-contacts-list a:hover {
+        text-decoration: underline;
+        color: #00a86b;
+      }
+    </style>
 </head>
 <body>
 
@@ -23,7 +159,7 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#library" class="nav-link">Library</a>
                 <a href="#partners" class="nav-link">Partners</a>
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <button onclick="openAuditModal()" class="btn btn-primary" style="cursor:pointer; border:none;">Request Audit</button>
             </nav>
         </div>
     </header>
@@ -135,7 +271,7 @@
                     </div>
                     <div class="result-actions">
                         <p>Request a tailored engineering study with exact CAPEX, OPEX and Class Approval roadmap:</p>
-                        <a href="#contact" class="btn btn-secondary">Request Detailed Engineering Audit</a>
+                        <button onclick="openAuditModal()" class="btn btn-secondary" style="cursor:pointer; border:none;">Request Detailed Engineering Audit</button>
                     </div>
                 </div>
             </div>
@@ -250,6 +386,7 @@
                         <li>ESD & WAPS technology selection</li>
                         <li>CAPEX / OPEX & Payback calculation</li>
                     </ul>
+                    <button onclick="openAuditModal()" class="btn btn-secondary" style="margin-top:15px; cursor:pointer; width:100%;">Order Assessment</button>
                 </div>
 
                 <div class="service-package-card featured">
@@ -261,6 +398,7 @@
                         <li>Machinery & Automation overhaul plan</li>
                         <li>Complete Technical Repair Specification</li>
                     </ul>
+                    <button onclick="openAuditModal()" class="btn btn-primary" style="margin-top:15px; cursor:pointer; width:100%;">Request Audit</button>
                 </div>
 
                 <div class="service-package-card">
@@ -271,6 +409,7 @@
                         <li>Automation & Electrical integration</li>
                         <li>Class Survey & Sea Trials handover</li>
                     </ul>
+                    <button onclick="openAuditModal()" class="btn btn-secondary" style="margin-top:15px; cursor:pointer; width:100%;">Book Supervision</button>
                 </div>
             </div>
         </div>
@@ -371,7 +510,47 @@
         </div>
     </footer>
 
-    <!-- DYNAMIC CALCULATOR SCRIPT -->
+    <!-- AUDIT MODAL POPUP (NETLIFY FORMS READY) -->
+    <div id="auditModal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-close-btn" onclick="closeAuditModal()">&times;</span>
+        <h3>Request Fleet Audit</h3>
+        <p class="modal-subtitle">Fill out the form or reach out directly to Andrei Simakin.</p>
+        
+        <form name="audit-request" method="POST" data-netlify="true" class="modal-form">
+          <input type="hidden" name="form-name" value="audit-request" />
+          
+          <div class="form-group-modal">
+            <input type="text" name="name" placeholder="Your Name / Company" required />
+          </div>
+          <div class="form-group-modal">
+            <input type="email" name="email" placeholder="Business Email" required />
+          </div>
+          <div class="form-group-modal">
+            <input type="text" name="vessel_info" placeholder="Vessel Name / IMO / Type (optional)" />
+          </div>
+          <div class="form-group-modal">
+            <textarea name="message" rows="3" placeholder="Briefly describe your request (e.g., CII improvement, ESD retrofit, technical audit)" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-modal-submit">Submit Request</button>
+        </form>
+
+        <hr class="modal-divider" />
+
+        <div class="direct-contacts">
+          <div class="direct-contacts-title">Direct Contacts</div>
+          <ul class="direct-contacts-list">
+            <li>📧 <a href="mailto:a.simakin@fleetexperts.solutions">Email Direct</a></li>
+            <li>💬 <a href="https://t.me/aNdReY_0670" target="_blank">Telegram</a></li>
+            <li>📱 <a href="https://wa.me/79219653622" target="_blank">WhatsApp</a></li>
+            <li>💼 <a href="https://www.linkedin.com/in/andrei-simakin-7b413840" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC CALCULATOR & MODAL SCRIPTS -->
     <script>
     function calculateProject() {
         const dwt = parseFloat(document.getElementById('dwt').value) || 58000;
@@ -412,7 +591,24 @@
         document.getElementById('calc-result').classList.remove('hidden');
     }
 
-    // Auto-run on load to display correct values immediately
+    // Modal Control Functions
+    function openAuditModal() {
+        document.getElementById("auditModal").style.display = "flex";
+    }
+
+    function closeAuditModal() {
+        document.getElementById("auditModal").style.display = "none";
+    }
+
+    // Close Modal on clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById("auditModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Auto-run calculator on load
     window.addEventListener('DOMContentLoaded', calculateProject);
     </script>
 
