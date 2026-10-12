@@ -103,7 +103,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: 85px; /* Немного увеличили высоту шапки под крупный круглый логотип */
 }
 
 .nav-menu {
@@ -610,26 +610,27 @@ footer {
     font-size: 0.85rem;
 }
 
-/* NAVBAR BRAND LOGO INTEGRATION (Увеличенный логотип и золото) */
+/* NAVBAR BRAND LOGO INTEGRATION (Крупный круглый логотип в шапке) */
 .brand-logo-container {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     text-decoration: none;
 }
 
 .brand-logo-img {
-    height: 56px; /* Увеличено */
-    width: auto;
-    border-radius: 6px;
-    border: 1px solid #C5A059;
-    box-shadow: 0 0 12px rgba(197, 160, 89, 0.3);
+    width: 64px;       /* Точная ширина */
+    height: 64px;      /* Точная высота для идеального круга */
+    border-radius: 50%; /* Превращаем в круг */
+    object-fit: cover; /* Аккуратное заполнение без искажений */
+    border: 2px solid #C5A059;
+    box-shadow: 0 0 14px rgba(197, 160, 89, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand-logo-container:hover .brand-logo-img {
     transform: scale(1.05);
-    box-shadow: 0 0 18px rgba(197, 160, 89, 0.5);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.6);
 }
 
 .brand-text-block {
@@ -641,19 +642,19 @@ footer {
     font-weight: 700;
     font-size: 1.05rem;
     letter-spacing: 0.08em;
-    color: #C5A059; /* Переведено в золотой цвет */
+    color: #C5A059;
     text-transform: uppercase;
 }
 
 .brand-motto {
     font-size: 0.65rem;
-    color: #C5A059; /* Золотой оттенок для девиза */
+    color: #C5A059;
     font-style: italic;
     letter-spacing: 0.05em;
     opacity: 0.85;
 }
 
-/* MODAL OVERLAY & CONTENT STYLES (Крупный читаемый логотип) */
+/* MODAL OVERLAY & CONTENT STYLES (Крупный круглый логотип в модалке) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -703,12 +704,13 @@ footer {
 }
 
 .modal-logo {
-    width: 130px; /* Увеличено для отличной читаемости рун и дерева */
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #C5A059;
+    width: 130px;      /* Крупный размер */
+    height: 130px;     /* Равные стороны для идеального круга */
+    border-radius: 50%; /* Превращаем в круг */
+    object-fit: cover;  /* Заполнение без искажения */
+    border: 2px solid #C5A059;
     margin-bottom: 14px;
-    box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+    box-shadow: 0 0 22px rgba(197, 160, 89, 0.5);
 }
 
 .modal-content h3 {
@@ -784,41 +786,6 @@ footer {
     color: #38bdf8;
 }
 
-/* Why Us Section Styles */
-.why-us-section {
-    padding: 80px 0;
-    background-color: #f8f9fa;
-}
-
-.why-us-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.why-card {
-    background: #ffffff;
-    padding: 1.8rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-top: 4px solid #00a86b;
-}
-
-.why-card h3 {
-    color: #0b2545;
-    font-size: 1.15rem;
-    margin-top: 0;
-    margin-bottom: 0.6rem;
-}
-
-.why-card p {
-    color: #555;
-    font-size: 0.92rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
 /* RESPONSIVE DESIGN ADJUSTMENTS */
 @media (max-width: 902px) {
     .hero .container, .about-grid {
@@ -837,3 +804,5 @@ footer {
         display: none;
     }
 }
+
+
