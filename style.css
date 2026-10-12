@@ -617,21 +617,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 902px) {
-    .hero .container, .about-grid {
-        grid-template-columns: 1fr;
-    }
-    .form-grid, .checkbox-group, .result-grid, .partners-grid {
-        grid-template-columns: 1fr;
-    }
-    .form-group.full-width {
-        grid-column: span 1;
-    }
-    .nav-menu {
-        display: none;
-    }
-}
 /* NAVBAR BRAND LOGO INTEGRATION */
 .brand-logo-container {
     display: flex;
