@@ -1,3 +1,12 @@
+:root {
+    --bg-dark: #0b131a;
+    --bg-card: #121d26;
+    --accent-teal: #00b4d8;
+    --gold-light: #f4e2bb;
+    --text-main: #d1dcdb;
+    --border-color: rgba(0, 180, 216, 0.2);
+}
+
 /* BASE RESET & FONTS */
 * {
     margin: 0;
@@ -6,9 +15,9 @@
 }
 
 body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #080d1d;
-    color: #e2e8f0;
     line-height: 1.6;
 }
 
