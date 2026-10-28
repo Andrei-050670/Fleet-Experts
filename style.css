@@ -118,7 +118,11 @@ a {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+}
+
+.nav-menu a {
+    white-space: nowrap;
 }
 
 .nav-link {
