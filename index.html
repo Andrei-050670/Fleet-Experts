@@ -9,12 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- И только потом подключаем наш главный файл стилей -->
     <link rel="stylesheet" href="./style.css?v=2">
 </head>
 <body>
-
     <!-- HEADER -->
     <header class="navbar">
         <div class="container nav-container">
@@ -67,7 +65,6 @@
             <p class="section-desc text-center">
                 Select your vessel specifications to generate a preliminary decarbonization project assessment and estimated energy savings.
             </p>
-
             <div class="estimator-card">
                 <form id="calc-form" onsubmit="event.preventDefault(); calculateProject();">
                     <div class="form-grid">
@@ -79,12 +76,10 @@
                                 <option value="container">Container Ship</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label for="dwt">Deadweight (DWT)</label>
                             <input type="number" id="dwt" placeholder="e.g. 58000" value="58000" min="1000" required>
                         </div>
-
                         <div class="form-group">
                             <label for="cii-rating">Current CII Rating</label>
                             <select id="cii-rating" required>
@@ -95,7 +90,6 @@
                                 <option value="E" selected>E - Immediate Action</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label for="fuel-type">Primary Fuel</label>
                             <select id="fuel-type" required>
@@ -106,7 +100,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="form-group full-width">
                         <label>Target Retrofit Technologies</label>
                         <div class="checkbox-group">
@@ -124,10 +117,8 @@
                             </label>
                         </div>
                     </div>
-
                     <button type="submit" class="btn btn-primary btn-block">Generate Preliminary Assessment</button>
                 </form>
-
                 <div id="calc-result" class="calc-result hidden">
                     <h3>Preliminary Project Summary</h3>
                     <div class="result-grid">
@@ -161,7 +152,6 @@
             <p class="section-desc text-center">
                 From fast-payback hydrodynamic devices to future-proof dual-fuel readiness and low-friction hull coatings.
             </p>
-
             <div class="tech-grid">
                 <!-- Tech 1 -->
                 <div class="tech-card">
@@ -169,7 +159,6 @@
                     <h3>Propeller & Hydrodynamic ESDs</h3>
                     <p><strong>Mewis Ducts, Pre-swirl Stators & Boss Cap Fins (PBCF).</strong> Optimizes water flow into the propeller, reducing rotational losses and generating <strong>3% to 8% fuel savings</strong> with minimal dry-dock installation time.</p>
                 </div>
-
                 <!-- Tech 2 -->
                 <div class="tech-card">
                     <div class="tech-icon">🧪</div>
@@ -177,28 +166,24 @@
                     <p><strong>Silicone Foul-Release:</strong> Ultra-slick surfaces for 4-6% fuel reduction.<br>
                     <strong>Graphite/Graphene Coatings:</strong> Extreme mechanical durability, persistent biofouling protection, and hydrodynamic drag reduction.</p>
                 </div>
-
                 <!-- Tech 3 -->
                 <div class="tech-card">
                     <div class="tech-icon">🌱</div>
                     <h3>Biofuel Preparedness (Drop-in Fuels)</h3>
                     <p>Immediate CO2 impact for EU ETS & FuelEU Maritime compliance (B30/HVO). Includes fuel system compatibility audits, elastomer upgrades, tank cleaning protocols, and Class NOx File updates.</p>
                 </div>
-
                 <!-- Tech 4 -->
                 <div class="tech-card">
                     <div class="tech-icon">⚓</div>
                     <h3>Wind-Assisted Propulsion (WAPS)</h3>
                     <p>Integration of Rotor Sails (Flettner) and Rigid Wings. Delivers <strong>8% to 20% fuel savings</strong>. Complete structural deck integration, stability calculations, and Class approval support.</p>
                 </div>
-
                 <!-- Tech 5 -->
                 <div class="tech-card">
                     <div class="tech-icon">🔄</div>
                     <h3>Dual-Fuel Integration & Readiness (Methanol / LNG)</h3>
                     <p>Full-scope independent engineering for <strong>Methanol-Ready / Gas-Ready</strong> conversions. We handle tank integration, double-walled piping, ESD safety, nitrogen inerting, and Class Plan Approval (IGF Code) — pairing seamlessly with OEM engine kit suppliers.</p>
                 </div>
-
                 <!-- Tech 6 -->
                 <div class="tech-card">
                     <div class="tech-icon">⚙️</div>
@@ -217,26 +202,22 @@
             <p class="section-desc text-center">
                 A structured 4-step engineering roadmap ensuring zero operational downtime and seamless Class acceptance.
             </p>
-
             <div class="lifecycle-steps">
                 <div class="step-card">
                     <div class="step-number">01</div>
                     <h3>Shipboard Audit & Feasibility Study</h3>
                     <p>Onboard inspection of vessel machinery and automation systems. Analysis of operational Noon Reports, telemetry, and baseline CII/EEXI gaps to calculate ROI and CAPEX/OPEX.</p>
                 </div>
-
                 <div class="step-card">
                     <div class="step-number">02</div>
                     <h3>Engineering & Class Approval</h3>
                     <p>Preparation of Basic & Detailed Engineering packages. Hydrodynamic, structural, electrical load, and stability calculations submitted for Class Plan Approval (DNV, LR, BV, RINA, ABS).</p>
                 </div>
-
                 <div class="step-card">
                     <div class="step-number">03</div>
                     <h3>Repair Specification & Sourcing</h3>
                     <p>Formulation of a comprehensive Technical Repair Specification (Ремведомость). Equipment sourcing, contractor auditing, and shipyard preparation (Yalova, Vietnam, etc.).</p>
                 </div>
-
                 <div class="step-card">
                     <div class="step-number">04</div>
                     <h3>Dry-Dock Supervision & Commissioning</h3>
@@ -263,7 +244,6 @@
                     </ul>
                     <button onclick="openAuditModal()" class="btn btn-secondary" style="margin-top:15px; cursor:pointer; width:100%;">Order Assessment</button>
                 </div>
-
                 <div class="service-package-card featured">
                     <div class="badge-card">RECOMMENDED</div>
                     <h3>Full Shipboard Audit & Repair Spec</h3>
@@ -275,7 +255,6 @@
                     </ul>
                     <button onclick="openAuditModal()" class="btn btn-primary" style="margin-top:15px; cursor:pointer; width:100%;">Request Audit</button>
                 </div>
-
                 <div class="service-package-card">
                     <h3>Dry-Dock & Retrofit Turnkey Supervision</h3>
                     <p class="package-desc">End-to-end technical management and shipyard supervision for retrofits, ESD installations, and dual-fuel conversions.</p>
@@ -297,34 +276,33 @@
                 <div class="about-image-wrapper">
                     <img src="profile.jpg" alt="Andrei Simakin" class="profile-img">
                 </div>
-               <div class="about-content">
-        <span class="sub-heading">TECHNICAL EXCELLENCE & LEADERSHIP</span>
-        <h2>Andrei Simakin</h2>
-        <p class="role title">Senior Marine Engineer, Technical Director & Fleet Management Consultant</p>
-        <!-- Секция Advanced Decarbonization & Operational Excellence -->
-<section id="technologies" class="technologies-section" style="padding: 80px 20px; background-color: #1a1a1a;">
-  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 50px; align-items: center;">
-    
-    <!-- Левая колонка: Текст (оставлена как есть) -->
-    <div style="color: #fff;">
-      <h2 style="font-size: 2.8em; line-height: 1.2; margin-bottom: 20px;">Advanced<br>Decarbonization &<br>Operational<br>Excellence</h2>
-      <p style="opacity: 0.85; margin-bottom: 30px; line-height: 1.6;">Energy-Saving Technologies, IMO CII/EEXI Optimization, EU ETS Compliance & Wind-Assisted Propulsion Integration.</p>
-      <div style="display: flex; gap: 15px;">
-        <button class="primary-btn" style="background-color: #00bcd4; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; cursor: pointer;">Calculate Retrofit</button>
-        <button class="secondary-btn" style="background: transparent; border: 2px solid #fff; color: #fff; padding: 10px 22px; border-radius: 4px; cursor: pointer;">About Expert</button>
-      </div>
-    </div>
-    
-    <!-- Правая колонка: Укрупненное изображение кораблика -->
-    <div style="border-radius: 8px; overflow: hidden; border: 1px solid #333;">
-      <!-- Важно: Используйте новое изображение-кроп technologies-ship-closeup.jpg -->
-      <img src="technologies-ship-closeup.jpg" alt="Advanced Decarbonization Technologies - FLEET EXPERTS SOLUTIONS" style="width: 100%; height: auto; object-fit: cover; object-position: center;">
-      
-      <!-- Комментарий для верстальщика: На новом изображении `technologies-ship-closeup.jpg` кораблик укрупнен, а надписи на борту "FLEET EXPERTS SOLUTIONS" и парусах "GREEN SHIPPING" / "CII OK" перерисованы чётко и легко читаются. -->
-    </div>
-  </div>
-</section>
-      </div> 
+                <div class="about-content">
+                    <span class="sub-heading">TECHNICAL EXCELLENCE & LEADERSHIP</span>
+                    <h2>Andrei Simakin</h2>
+                    <p class="role-title" style="color: #C5A059; font-weight: 600; margin-bottom: 15px;">Senior Marine Engineer, Technical Director & Fleet Management Consultant</p>
+                    <p class="about-text" style="line-height: 1.6; opacity: 0.9; margin-bottom: 20px;">
+                        Over 16 years of executive leadership across international fleet operations, ship repair, and shipyard oversight. Former Technical Fleet Superintendent and Chief Engineer on heavy Ro-Ro, reefer, and bulk carrier fleets (including 10 years with Cobelfret, Norbulk Shipping, Green Reefers / Green Management, and Garland Shipping / Demetra Holding). Specializing in ship operations, engine maintenance, technical auditing, and complex vessel retrofits. Delivering practical engineering solutions for IMO Green compliance, EU ETS strategies, and green fleet transformation.
+                    </p>
+
+                    <!-- Расширенный блок навыков -->
+                    <div class="tags-container" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Marine Engineering</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Decarbonization & CII</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Shipyard Supervision</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Class Plan Approval</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">EU ETS & FuelEU Strategies</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">EEXI & Energy-Saving Devices</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Reefer Fleets Management</span>
+                        <span class="tag" style="background: #222; border: 1px solid #C5A059; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.85em;">Asset Lifecycle Optimization</span>
+                    </div>
+
+                    <!-- Трек-рекорд для SEO и партнеров -->
+                    <div style="border-left: 3px solid #C5A059; padding-left: 12px; opacity: 0.9; font-size: 0.9em;">
+                        <strong style="color: #C5A059;">Key Track Record:</strong> Cobelfret, Green Reefers / Green Management, Norbulk Shipping, Garland Shipping (Demetra Holding), BLRT Group, Huafeng Zhoushan Shipyard, and Transbosphor Maritime.
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- NEW SECTION: WHY WORK WITH US -->
@@ -335,23 +313,19 @@
             <p class="section-desc text-center">
                 Practical engineering precision paired with deep operational awareness to maximize fleet performance and compliance.
             </p>
-
             <div class="why-us-grid">
                 <div class="why-card">
                     <h3>Chief Engineer Expertise</h3>
                     <p>Direct oversight from sea-going Chief Engineer and shipyard experience. Practical engineering that works in actual sea conditions, not just on paper.</p>
                 </div>
-
                 <div class="why-card">
                     <h3>Vendor-Independent Advisory</h3>
                     <p>Unbiased evaluation of Energy Saving Devices (ESDs) and Retrofits. We select solutions solely based on payload efficiency, CAPEX/OPEX payback, and ROI.</p>
                 </div>
-
                 <div class="why-card">
                     <h3>Class & Regulatory Mastery</h3>
                     <p>In-depth expertise across IMO CII/EEXI, EU ETS, and FuelEU Maritime regulations ensures complete compliance and flawless Class Plan Approvals.</p>
                 </div>
-
                 <div class="why-card">
                     <h3>Turnkey Yard Execution</h3>
                     <p>From initial diagnostic audits and repair specifications (Ремведомость) to hands-on dry-dock supervision in Turkey, South Africa, or Southeast Asia.</p>
@@ -360,61 +334,63 @@
         </div>
     </section>
 
-    <!-- Секция рекомендаций и отзывов экспертов -->
-<section id="endorsements" style="padding: 60px 20px; background-color: #121212; color: #fff; border-top: 1px solid #333;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; color: #C5A059; margin-bottom: 10px; font-size: 2.2em;">Professional Endorsements</h2>
-    <p style="text-align: center; color: #aaa; margin-bottom: 40px; font-size: 1.1em;">Trusted by industry leaders, shipyard executives, and fleet managers worldwide.</p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-      
-      <!-- Карточка 1: Transbosphor -->
-      <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-style: italic; opacity: 0.9; margin-bottom: 20px; line-height: 1.6;">
-          "In a volatile global shipping market, the demand for elite crisis-architects and technical managers who can successfully execute complex shipyard transformations and resolve high-stakes engineering failures is critical."
+    <!-- СЕКЦИЯ РЕКОМЕНДАЦИЙ И ОТЗЫВОВ (100% ЗОЛОТОЙ ТЕКСТ `#C5A059`) -->
+    <section id="endorsements" style="padding: 80px 20px; background-color: #121212; border-top: 1px solid #333;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #C5A059; margin-bottom: 10px; font-size: 2.5em; font-weight: 600;">Professional Endorsements</h2>
+        <p style="text-align: center; color: #C5A059; margin-bottom: 50px; font-size: 1.1em; opacity: 0.9;">
+          Trusted by industry leaders, shipyard executives, and fleet managers worldwide.
         </p>
-        <div>
-          <h4 style="color: #C5A059; margin: 0 0 5px 0;">Captain Mustafa CAN</h4>
-          <p style="font-size: 0.85em; opacity: 0.7; margin: 0;">Exec. Director & CEO, Transbosphor Maritime, Istanbul</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          
+          <!-- Карточка 1: Transbosphor -->
+          <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-style: italic; color: #C5A059; opacity: 0.95; margin-bottom: 20px; line-height: 1.6; font-size: 1em;">
+              "In a volatile global shipping market, the demand for elite crisis-architects and technical managers who can successfully execute complex shipyard transformations and resolve high-stakes engineering failures is critical."
+            </p>
+            <div>
+              <h4 style="color: #C5A059; margin: 0 0 4px 0; font-size: 1.1em; font-weight: 700;">Captain Mustafa CAN</h4>
+              <p style="color: #C5A059; font-size: 0.85em; opacity: 0.8; margin: 0;">Exec. Director & CEO, Transbosphor Maritime, Istanbul</p>
+            </div>
+          </div>
+
+          <!-- Карточка 2: Huafeng Zhoushan Shipyard -->
+          <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-style: italic; color: #C5A059; opacity: 0.95; margin-bottom: 20px; line-height: 1.6; font-size: 1em;">
+              "Unlike standard consultants, he possesses a rare mastery of practical decarbonization retrofits, translating complex regulatory requirements into precise, executable shipyard production packages."
+            </p>
+            <div>
+              <h4 style="color: #C5A059; margin: 0 0 4px 0; font-size: 1.1em; font-weight: 700;">Vincent Chen</h4>
+              <p style="color: #C5A059; font-size: 0.85em; opacity: 0.8; margin: 0;">Commercial Director & Vice GM, Huafeng Zhoushan Shipyard, China</p>
+            </div>
+          </div>
+
+          <!-- Карточка 3: BLRT Grupp / Tallinn Shipyard -->
+          <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-style: italic; color: #C5A059; opacity: 0.95; margin-bottom: 20px; line-height: 1.6; font-size: 1em;">
+              "During his tenure managing critical upgrade projects at our facilities, Mr. Simakin demonstrated extraordinary capabilities as a Senior Marine Engineer and Crisis-Architect..."
+            </p>
+            <div>
+              <h4 style="color: #C5A059; margin: 0 0 4px 0; font-size: 1.1em; font-weight: 700;">Gabriel Avanesov</h4>
+              <p style="color: #C5A059; font-size: 0.85em; opacity: 0.8; margin: 0;">Senior Key Clients Manager, BLRT Grupp (Tallinn Shipyard)</p>
+            </div>
+          </div>
+
+          <!-- Карточка 4: Green Management -->
+          <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-style: italic; color: #C5A059; opacity: 0.95; margin-bottom: 20px; line-height: 1.6; font-size: 1em;">
+              "His asset lifecycle optimization frameworks—auditing maintenance schedules and structural integrity to minimize degradation—directly aligned asset OPEX with long-term investment goals."
+            </p>
+            <div>
+              <h4 style="color: #C5A059; margin: 0 0 4px 0; font-size: 1.1em; font-weight: 700;">Capt. Valeriy Duryagin</h4>
+              <p style="color: #C5A059; font-size: 0.85em; opacity: 0.8; margin: 0;">Fleet Manager (DPA, CSO), Green Management, Poland</p>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Карточка 2: Huafeng Zhoushan Shipyard -->
-      <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-style: italic; opacity: 0.9; margin-bottom: 20px; line-height: 1.6;">
-          "Unlike standard consultants, he possesses a rare mastery of practical decarbonization retrofits, translating complex regulatory requirements into precise, executable shipyard production packages."
-        </p>
-        <div>
-          <h4 style="color: #C5A059; margin: 0 0 5px 0;">Vincent Chen</h4>
-          <p style="font-size: 0.85em; opacity: 0.7; margin: 0;">Commercial Director & Vice GM, Huafeng Zhoushan Shipyard, China</p>
-        </div>
-      </div>
-
-      <!-- Карточка 3: BLRT Grupp / Tallinn Shipyard -->
-      <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-style: italic; opacity: 0.9; margin-bottom: 20px; line-height: 1.6;">
-          "During his tenure managing critical upgrade projects at our facilities, Mr. Simakin demonstrated extraordinary capabilities as a Senior Marine Engineer and Crisis-Architect..."
-        </p>
-        <div>
-          <h4 style="color: #C5A059; margin: 0 0 5px 0;">Gabriel Avanesov</h4>
-          <p style="font-size: 0.85em; opacity: 0.7; margin: 0;">Senior Key Clients Manager, BLRT Grupp (Tallinn Shipyard)</p>
-        </div>
-      </div>
-
-      <!-- Карточка 4: Green Management -->
-      <div style="background: #1a1a1a; border: 1px solid #C5A059; border-radius: 8px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-style: italic; opacity: 0.9; margin-bottom: 20px; line-height: 1.6;">
-          "His asset lifecycle optimization frameworks—auditing maintenance schedules and structural integrity to minimize degradation—directly aligned asset OPEX with long-term investment goals."
-        </p>
-        <div>
-          <h4 style="color: #C5A059; margin: 0 0 5px 0;">Capt. Valeriy Duryagin</h4>
-          <p style="font-size: 0.85em; opacity: 0.7; margin: 0;">Fleet Manager (DPA, CSO), Green Management, Poland</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- LIBRARY SECTION (CLICKABLE CARDS) -->
     <section id="library" class="library-section">
@@ -458,53 +434,47 @@
     </section>
 
     <!-- GLOBAL NETWORK & PARTNERS SECTION -->
-<section id="partners" class="partners-section">
-  <div class="container">
-    <span class="sub-heading text-center">GLOBAL NETWORK</span>
-    <h2 class="section-title text-center">Strategic Partners & Regional Experts</h2>
-    <div class="partners-grid">
-
-      <!-- Региональный партнер / Эксперт: Рушан Хамид -->
-     <div class="partner-card expert-card">
-  <div style="margin-bottom: 15px; width: 100%; height: 360px; overflow: hidden; border-radius: 8px; border: 1px solid #C5A059;">
-    <img src="rushan-hameed.jpg" alt="Rushan Hameed" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;">
-  </div>
-  <h3>Rushan Hameed</h3>
-  <p style="color: #C5A059; font-weight: bold; margin-bottom: 5px;">Regional Partner (Sri Lanka)</p>
-  <p style="font-size: 0.9em; opacity: 0.85;">Director, Omega Shipping. Decarbonization & Port Agency Services.</p>
-</div>
-
-        <!-- Региональный эксперт: Эрнест В. Фернандо (Индия) -->
-      <div class="partner-card expert-card">
-        <div style="margin-bottom: 15px; width: 100%; height: 360px; overflow: hidden; border-radius: 8px; border: 1px solid #C5A059;">
-          <img src="earnest-fernando.jpg" alt="Earnest V. Fernando" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;">
+    <section id="partners" class="partners-section">
+      <div class="container">
+        <span class="sub-heading text-center">GLOBAL NETWORK</span>
+        <h2 class="section-title text-center">Strategic Partners & Regional Experts</h2>
+        <div class="partners-grid">
+          <!-- Рушан Хамид -->
+          <div class="partner-card expert-card">
+            <div style="margin-bottom: 15px; width: 100%; height: 360px; overflow: hidden; border-radius: 8px; border: 1px solid #C5A059;">
+              <img src="rushan-hameed.jpg" alt="Rushan Hameed" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;">
+            </div>
+            <h3>Rushan Hameed</h3>
+            <p style="color: #C5A059; font-weight: bold; margin-bottom: 5px;">Regional Partner (Sri Lanka)</p>
+            <p style="font-size: 0.9em; opacity: 0.85;">Director, Omega Shipping. Decarbonization & Port Agency Services.</p>
+          </div>
+          <!-- Эрнест В. Фернандо -->
+          <div class="partner-card expert-card">
+            <div style="margin-bottom: 15px; width: 100%; height: 360px; overflow: hidden; border-radius: 8px; border: 1px solid #C5A059;">
+              <img src="earnest-fernando.jpg" alt="Earnest V. Fernando" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;">
+            </div>
+            <h3>Earnest V. Fernando</h3>
+            <p style="color: #C5A059; font-weight: bold; margin-bottom: 5px;">Regional Partner (India)</p>
+            <p style="font-size: 0.9em; opacity: 0.85;">Chief Eng (MEO Cl-I) F I Mar E. Director, Jothi Marine Engineering, India.</p>
+          </div>
+          <!-- Партнер: Южная Африка -->
+          <div class="partner-card">
+            <h3>Nouum Engineering</h3>
+            <p>Technical & Green Advisory Services (South Africa)</p>
+          </div>
+          <!-- Партнер: Вьетнам -->
+          <div class="partner-card">
+            <h3>QMI Technical Co., Ltd</h3>
+            <p>Shipyard & Engineering Services (Vietnam)</p>
+          </div>
+          <!-- Партнер: Турция -->
+          <div class="partner-card">
+            <h3>Girgin Kale Shipyard</h3>
+            <p>Ship Repair & Dry-Docking Facilities (Yalova, Turkey)</p>
+          </div>
         </div>
-        <h3>Earnest V. Fernando</h3>
-        <p style="color: #C5A059; font-weight: bold; margin-bottom: 5px;">Regional Partner (India)</p>
-        <p style="font-size: 0.9em; opacity: 0.85;">Chief Eng (MEO Cl-I) F I Mar E. Director, Jothi Marine Engineering, India.</p>
       </div>
-
-      <!-- Партнер: Южная Африка -->
-      <div class="partner-card">
-        <h3>Nouum Engineering</h3>
-        <p>Technical & Green Advisory Services (South Africa)</p>
-      </div>
-
-      <!-- Партнер: Вьетнам -->
-      <div class="partner-card">
-        <h3>QMI Technical Co., Ltd</h3>
-        <p>Shipyard & Engineering Services (Vietnam)</p>
-      </div>
-
-      <!-- Партнер: Турция -->
-      <div class="partner-card">
-        <h3>Girgin Kale Shipyard</h3>
-        <p>Ship Repair & Dry-Docking Facilities (Yalova, Turkey)</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer id="contact">
@@ -513,7 +483,7 @@
         </div>
     </footer>
 
-    <!-- AUDIT MODAL POPUP WITH YGGDRASIL LOGO -->
+    <!-- AUDIT MODAL POPUP -->
     <div id="auditModal" class="modal-overlay" style="display:none;">
       <div class="modal-content">
         <span class="modal-close-btn" onclick="closeAuditModal()">&times;</span>
@@ -526,9 +496,7 @@
         <a href="mailto:a.simakin@fleetexperts.solutions?subject=Audit%20Request%20-%20Fleet%20Experts%20Solutions&body=Hello%20Andrei,%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20technical%20audit%20/%20consultation%20for%20our%20vessel(s).%0D%0A%0D%0AVessel%20Name/Type:%20%0D%0AKey%20Objectives%20(CII,%20ESD,%20Retrofit):%20%0D%0A%0D%0ABest%20regards," class="btn-email-direct">
             ✉️ Send Email Request
         </a>
-
         <hr class="modal-divider" />
-
         <div class="direct-contacts">
           <div class="direct-contacts-title">Direct Messaging</div>
           <ul class="direct-contacts-list">
@@ -545,36 +513,27 @@
     <script>
     function calculateProject() {
         const dwt = parseFloat(document.getElementById('dwt').value) || 58000;
-        const startRating = document.getElementById('cii-rating').value; // A, B, C, D, E
-
+        const startRating = document.getElementById('cii-rating').value;
         const wind = document.getElementById('tech-wind').checked ? 8 : 0;
         const vfd = document.getElementById('tech-vfd').checked ? 3 : 0;
         const esd = document.getElementById('tech-esd').checked ? 5 : 0;
         const hull = document.getElementById('tech-hull').checked ? 6 : 0;
-
         let totalSavings = wind + vfd + esd + hull;
         if (totalSavings === 0) totalSavings = 5;
-
-        // Dynamic CII Calculation
+        
         const ratingsOrder = ['E', 'D', 'C', 'B', 'A'];
         let currentIndex = ratingsOrder.indexOf(startRating);
-
-        // Grade Jump logic based on savings
         let gradeJump = 1;
         if (totalSavings >= 10 && totalSavings < 18) gradeJump = 2;
         if (totalSavings >= 18) gradeJump = 3;
-
         let newIndex = Math.min(currentIndex + gradeJump, 4);
         let finalRating = ratingsOrder[newIndex];
-
-        // Format textual outcome
+        
         let ratingText = "Grade " + finalRating;
         if (finalRating === 'B' || finalRating === 'A') {
             ratingText = "Grade " + finalRating + " (Sustainable)";
         }
-
         const annualCo2Saved = Math.round((dwt * 0.12) * (totalSavings / 100));
-
         document.getElementById('res-fuel').innerText = '~' + totalSavings + '%';
         document.getElementById('res-cii').innerText = ratingText;
         document.getElementById('res-co2').innerText = '~' + annualCo2Saved.toLocaleString() + ' MT / year';
@@ -582,32 +541,25 @@
         document.getElementById('calc-result').classList.remove('hidden');
     }
 
-    // Modal Control Functions
     function openAuditModal() {
         const modal = document.getElementById("auditModal");
         if (modal) {
             modal.style.display = "flex";
         }
     }
-
     function closeAuditModal() {
         const modal = document.getElementById("auditModal");
         if (modal) {
             modal.style.display = "none";
         }
     }
-
-    // Close Modal on clicking outside
     window.onclick = function(event) {
         const modal = document.getElementById("auditModal");
         if (event.target === modal) {
             modal.style.display = "none";
         }
     }
-
-    // Auto-run calculator on load
     window.addEventListener('DOMContentLoaded', calculateProject);
     </script>
-
 </body>
 </html>
